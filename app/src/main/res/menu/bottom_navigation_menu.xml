@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_search"
+        android:title="home"
+        android:icon="@drawable/vector" />
+    <item android:id="@+id/action_settings"
+        android:title="add"
+        android:icon="@drawable/group_1" />
+    <item android:id="@+id/action_navigation"
+        android:title="clients"
+        android:icon="@drawable/vector_4" />
+</menu>
