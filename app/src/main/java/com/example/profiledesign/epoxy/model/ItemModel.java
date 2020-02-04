@@ -22,8 +22,8 @@ public abstract class ItemModel extends EpoxyModelWithHolder<ItemModel.Holder> {
     @EpoxyAttribute String text;
     @Override
     public void bind(Holder holder) {
-       /* holder.image.setImageResource(imageSource);
-        holder.image.setOnClickListener(clickListener);*/
+        holder.image.setImageResource(imageSource);
+        holder.image.setOnClickListener(clickListener);
         holder.header_text.setText(text);
     }
 
