@@ -30,9 +30,9 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation 'com.google.android.material:material:1.2.0-alpha04'
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.airbnb.android:epoxy:3.7.0'
     annotationProcessor 'com.airbnb.android:epoxy-processor:3.7.0'
     implementation 'com.jakewharton:butterknife:10.2.1'
+    implementation 'com.squareup.picasso:picasso:2.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
 }

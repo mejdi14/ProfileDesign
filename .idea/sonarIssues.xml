@@ -188,6 +188,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/test.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/two_images_item.xml">
           <value>
             <set />
@@ -209,6 +214,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/xml/scene.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../animation-samples/ProARM/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../animation-samples/ProARM/build.gradle">
           <value>
             <set />
           </value>

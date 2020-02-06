@@ -1,11 +1,17 @@
 package com.example.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.motion.widget.MotionLayout;
+import androidx.constraintlayout.widget.Guideline;
 
 import com.airbnb.epoxy.EpoxyRecyclerView;
 import com.example.profiledesign.R;
@@ -22,6 +28,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.bottom_navigation)
@@ -32,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
     TextView name;
     @BindView(R.id.job)
     TextView job;
-    @BindView(R.id.follow)
-    TextView follow;
+
     @BindView(R.id.nb_photos)
     TextView nbPhotos;
     @BindView(R.id.photos)
@@ -46,6 +52,25 @@ public class MainActivity extends AppCompatActivity {
     TextView followings;
     @BindView(R.id.recylerView)
     EpoxyRecyclerView recylerView;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.back)
+    ImageView back;
+    @BindView(R.id.option)
+    ImageView option;
+    @BindView(R.id.foward)
+    ImageView foward;
+    @BindView(R.id.followers)
+    TextView followers;
+    @BindView(R.id.guideline2)
+    Guideline guideline2;
+    @BindView(R.id.guideline)
+    Guideline guideline;
+    @BindView(R.id.follow)
+    TextView follow;
+    @BindView(R.id.main_frame)
+    MotionLayout mainFrame;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,29 +78,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         bottomNavigationView.setItemIconTintList(null);
-        List<TwoPhotos> photos=new ArrayList<>();
+        List<TwoPhotos> photos = new ArrayList<>();
         loadData(photos);
         TwoImageController imageController = initEpoxyAdapter();
         initListAnimation();
         showList(photos, imageController);
 
 
-
-
     }
 
     @NotNull
     private TwoImageController initEpoxyAdapter() {
-        TwoImageController imageController=new TwoImageController();
+        TwoImageController imageController = new TwoImageController();
         recylerView.setAdapter(imageController.getAdapter());
         recylerView.setHasFixedSize(true);
         return imageController;
     }
 
     private void loadData(List<TwoPhotos> photos) {
-        photos.add(new TwoPhotos(R.drawable.animal,R.drawable.flowers));
-        photos.add(new TwoPhotos(R.drawable.owl,R.drawable.beach));
-        photos.add(new TwoPhotos(R.drawable.sky,R.drawable.flowers));
+        photos.add(new TwoPhotos(R.drawable.animal, R.drawable.flowers));
+        photos.add(new TwoPhotos(R.drawable.owl, R.drawable.beach));
+        photos.add(new TwoPhotos(R.drawable.sky, R.drawable.flowers));
     }
 
     private void initListAnimation() {
@@ -86,7 +109,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void showList(List<TwoPhotos> photos, TwoImageController imageController) {
 
-        imageController.setData(photos,new Photo(R.drawable.flowers,"flowers"));
+        imageController.setData(photos, new Photo(R.drawable.flowers, "flowers"));
     }
 
+    @OnClick({R.id.profile_image, R.id.foward})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.profile_image:
+                startActivity(new Intent(this, DetailsActivity.class));
+                break;
+            case R.id.foward:
+                break;
+        }
+    }
 }
