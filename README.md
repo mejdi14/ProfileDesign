@@ -1,6 +1,6 @@
 # Profile Design
 
-<img src="/screenshots/video.gif" alt="sample" title="sample" width="320" height="600" align="right" vspace="52" />
+<img src="/screenshots/video.gif" alt="sample" title="sample" width="320" height="800" align="right" vspace="52" />
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
@@ -10,7 +10,7 @@
 Created this cool design from [Abdullah Sajol](https://www.uplabs.com/mdabdullahsajol) as an android application. 
 
 
-  <img alt="Design on Uplabs" src="/screenshots/preview.jpg" width="196" height="180" />
+  <img alt="Design on Uplabs" src="/screenshots/preview.jpg" width="396" height="380" />
 
 
 USAGE
