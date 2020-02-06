@@ -1,4 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_empty"
+        android:title="add"
+        android:icon="@drawable/vector_2" />
     <item android:id="@+id/action_search"
         android:title="home"
         android:icon="@drawable/vector" />
@@ -8,4 +11,9 @@
     <item android:id="@+id/action_navigation"
         android:title="clients"
         android:icon="@drawable/vector_4" />
+
+
+    <item android:id="@+id/action_nothing"
+        android:title="clients"
+        android:icon="@drawable/vector_2" />
 </menu>

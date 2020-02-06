@@ -28,7 +28,6 @@
         android:id="@+id/second_image"
         android:layout_width="0dp"
         android:layout_height="140dp"
-        android:src="@drawable/buildings"
         android:scaleType="centerCrop"
         android:layout_margin="20dp"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.Example.MEJDI"

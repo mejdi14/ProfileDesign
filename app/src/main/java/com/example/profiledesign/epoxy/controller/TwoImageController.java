@@ -2,30 +2,19 @@ package com.example.profiledesign.epoxy.controller;
 
 import androidx.annotation.NonNull;
 
-import com.airbnb.epoxy.EpoxyController;
+import com.airbnb.epoxy.Typed2EpoxyController;
 import com.example.profiledesign.BuildConfig;
+import com.example.profiledesign.epoxy.model.ItemModel_;
 import com.example.profiledesign.epoxy.model.TwoItemsModel_;
+import com.example.profiledesign.models.Photo;
 import com.example.profiledesign.models.TwoPhotos;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class TwoImageController extends EpoxyController {
-
-    public TwoImageController() {
-        setDebugLoggingEnabled(BuildConfig.DEBUG);
-    }
-    private List<TwoPhotos> photos = new ArrayList<>();
-    public void setData(List<TwoPhotos> data, boolean b){
-        photos.addAll(data);
-    }
-
-    public void clearDataset() {
-        photos.clear();
-    }
+public class TwoImageController extends Typed2EpoxyController<List<TwoPhotos>, Photo> {
 
     @Override
-    protected void buildModels() {
+    protected void buildModels(List<TwoPhotos> photos, Photo singlePhoto) {
         int counter=0;
         for (TwoPhotos photo:photos){
             new TwoItemsModel_()
@@ -35,6 +24,10 @@ public class TwoImageController extends EpoxyController {
                     .addTo(this);
             counter++;
         }
+        new ItemModel_()
+                .id(10)
+                .imageSource(singlePhoto.getImage())
+                .addTo(this);
     }
     @Override
     protected void onExceptionSwallowed(@NonNull RuntimeException exception) {

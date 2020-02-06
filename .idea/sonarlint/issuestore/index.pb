@@ -5,15 +5,17 @@ m
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 v
 Fapp/src/main/java/com/example/profiledesign/epoxy/model/ItemModel.java,4\f\4f12a20569517e61d9f14e74919975545d74f614
-m
-=app/src/main/java/com/example/profiledesign/MainActivity.java,2\1\21d57d8a9cc624168ec0a6f278610d79a087903c
-e
-5app/src/main/java/com/example/profiledesign/Data.java,6\e\6e3dfb66797e1b967237a3b20c5e443fbffc2eb4
-f
-6app/src/main/java/com/example/profiledesign/Model.java,4\e\4e958547f43bb8672883ff734a27ea97e22e7db0
-k
-;app/src/main/java/com/example/profiledesign/Controller.java,c\f\cf7c56b87bed4f6343734dd7db5dd79e24485e92
 Å
 Qapp/src/main/java/com/example/profiledesign/epoxy/controller/ImageController.java,8\b\8ba082850e2e422e5386ebcc02dc6813777e749b
-p
-@app/src/main/java/com/example/profiledesign/DetailsActivity.java,c\a\ca0de17d3595d2d2cadc847c002137a8fd5ea7d1
+q
+Aapp/src/main/java/com/example/profiledesign/models/TwoPhotos.java,f\9\f957fbb006f5db094c7a59f3d411dc432001fec6
+z
+Japp/src/main/java/com/example/profiledesign/epoxy/model/TwoItemsModel.java,2\3\235bd49cd90d229559a5178e2d36fb32af82aa46
+e
+5app/src/main/java/com/example/ui/DetailsActivity.java,0\a\0a32628e7744b34ace63366b04a8304c3fceab3e
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+Ñ
+Tapp/src/main/java/com/example/profiledesign/epoxy/controller/TwoImageController.java,4\7\47452da87fbbc7b116d3f51fcf05c2d1c81b38b9
+b
+2app/src/main/java/com/example/ui/MainActivity.java,a\0\a04f5277ea00700c2b9cfb3557717b29e2f9666b

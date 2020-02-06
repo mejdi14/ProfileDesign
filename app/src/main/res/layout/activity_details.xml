@@ -2,18 +2,209 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailsActivity">
+    android:background="@color/white"
+    tools:context="com.example.ui.DetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/main_frame">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/image"
-        android:src="@drawable/quality_face"
         android:layout_width="match_parent"
         android:layout_height="380dp"
         android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/quality_face"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+    <ImageView
+        android:id="@+id/options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+
+        android:src="@drawable/options"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+    <View
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="160dp"
+        android:background="@color/white"
+        android:rotation="160"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="Shane Richar"
+        android:textColor="#00044D"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toStartOf="@id/purple_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+    <ImageView
+        android:id="@+id/location_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/location"
+        app:layout_constraintEnd_toStartOf="@id/location_name"
+        app:layout_constraintStart_toStartOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/location_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:alpha="0.4"
+        android:fontFamily="@font/gilroy_medium"
+        android:paddingLeft="10dp"
+        android:text="London, UK"
+        android:textColor="#00044D"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@id/purple_background"
+        app:layout_constraintStart_toEndOf="@id/location_icon"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <ImageView
+        android:id="@+id/purple_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+
+        android:src="@drawable/purple_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+
+    <ImageView
+        android:id="@+id/download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:src="@drawable/download_cloud_1"
+        app:layout_constraintBottom_toBottomOf="@id/purple_background"
+        app:layout_constraintEnd_toEndOf="@id/purple_background"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="@id/purple_background"
+        app:layout_constraintTop_toTopOf="@id/purple_background"
+        app:layout_constraintVertical_bias="0.296" />
+
+    <ImageView
+        android:id="@+id/heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/heart"
+        app:layout_constraintEnd_toStartOf="@id/location_name"
+        app:layout_constraintStart_toStartOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/location_icon" />
+
+    <ImageView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/message"
+
+        app:layout_constraintStart_toEndOf="@id/heart"
+        app:layout_constraintTop_toBottomOf="@id/location_icon" />
+
+    <ImageView
+        android:id="@+id/bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/bookmark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location_icon" />
+
+    <TextView
+        android:id="@+id/large_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:alpha="0.4"
+        android:fontFamily="@font/gilroy_medium"
+        android:padding="10dp"
+        android:text="@string/large_text"
+        android:textColor="#00044D"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/heart"
+        app:layout_constraintTop_toBottomOf="@id/heart" />
+
+    <TextView
+        android:id="@+id/hashtag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:alpha="0.64"
+        android:text="#photography"
+        android:textColor="#00044D"
+        android:textSize="14dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/text_gray_background"
+        app:layout_constraintStart_toStartOf="@id/large_text"
+        app:layout_constraintTop_toBottomOf="@id/large_text" />
+
+    <TextView
+        android:id="@+id/hashtag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:alpha="0.64"
+        android:text="#fashion"
+        android:textColor="#00044D"
+        android:textSize="14dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/text_gray_background"
+        app:layout_constraintStart_toEndOf="@id/hashtag1"
+        app:layout_constraintTop_toBottomOf="@id/large_text" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

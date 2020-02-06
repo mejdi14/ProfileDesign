@@ -30,7 +30,6 @@ public class ImageController extends EpoxyController {
         for (Photo photo:photos){
             new ItemModel_()
                     .id(counter)
-                    .text("hello")
                     .imageSource(photo.getImage())
             .addTo(this);
             counter++;

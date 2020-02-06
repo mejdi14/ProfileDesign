@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetEnd="@id/collapsed"
+        app:constraintSetStart="@id/expanded"
+        app:duration="200">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/recylerView"
+            app:touchAnchorSide="top" />
+
+        <KeyFrameSet>
+
+
+
+
+
+
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/expanded">
+        <Constraint
+            android:id="@+id/recylerView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/followers" />
+        <Constraint
+            android:id="@+id/profile_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="20dp"
+            style="@style/circleImageView"
+            android:src="@drawable/ellipse_11"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            />
+
+
+        <Constraint
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shane Richar"
+            android:textSize="32dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#00044D"
+            android:fontFamily="@font/gilroy_bold"
+            app:layout_constraintStart_toEndOf="@id/profile_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" >
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="25" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/job"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Photographer"
+            android:textSize="20dp"
+            android:alpha="0.4"
+
+            android:textColor="#00044D"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name"/>
+
+
+        <Constraint
+            android:id="@+id/follow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="follow"
+            android:textSize="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/text_round_backgound"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/job"/>
+
+        <Constraint
+            android:id="@+id/foward"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/follow"
+            app:layout_constraintTop_toBottomOf="@id/job" />
+
+        <Constraint
+            android:id="@+id/nb_photos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="90"
+            android:gravity="center"
+            android:textSize="28dp"
+            android:visibility="visible"
+            android:layout_marginTop="40dp"
+            android:textColor="#00044D"
+            android:alpha="1"
+            android:translationX="0dp"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"/>
+        <Constraint
+            android:id="@+id/photos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:text="Followers"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#00044D"
+            android:alpha="0.4"
+            android:translationX="0dp"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/nb_photos"/>
+
+        <Constraint
+            android:id="@+id/nb_followers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="10K"
+            android:gravity="center"
+            android:textSize="28dp"
+            android:layout_marginTop="40dp"
+            android:textColor="#00044D"
+            android:alpha="1"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"/>
+        <Constraint
+            android:id="@+id/followers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Followers"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#00044D"
+            android:alpha="0.4"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/nb_photos"/>
+
+        <Constraint
+            android:id="@+id/nb_followings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="960"
+            android:gravity="center"
+            android:textSize="28dp"
+            android:layout_marginTop="40dp"
+            android:textColor="#00044D"
+            android:alpha="1"
+            android:translationX="0dp"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"/>
+        <Constraint
+            android:id="@+id/followings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Followings"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#00044D"
+            android:alpha="0.4"
+            android:translationX="0dp"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nb_photos"/>
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/collapsed">
+
+
+
+        <Constraint
+            android:id="@+id/recylerView"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/follow"/>
+
+        <Constraint
+            android:id="@+id/profile_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="20dp"
+            style="@style/circleImageView"
+            android:src="@drawable/ellipse_11"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@+id/back"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Constraint
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shane Richar"
+            android:textSize="32dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#00044D"
+            android:fontFamily="@font/gilroy_bold"
+            app:layout_constraintStart_toEndOf="@id/profile_image"
+            app:layout_constraintEnd_toEndOf="@id/option"
+            app:layout_constraintTop_toTopOf="parent" >
+          <!--  <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="20" />-->
+        </Constraint>
+        <Constraint
+            android:id="@+id/job"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Photographer"
+            android:textSize="20dp"
+            android:alpha="0.4"
+            android:translationX="300dp"
+            android:textColor="#00044D"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintEnd_toEndOf="@id/main_frame"
+            app:layout_constraintBottom_toTopOf="@id/follow"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+        <Constraint
+            android:id="@+id/follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="follow"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_round_backgound"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toEndOf="@id/nb_followers"
+            app:layout_constraintEnd_toStartOf="@id/foward"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+        <Constraint
+            android:id="@+id/foward"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/arrow"
+            app:layout_constraintStart_toEndOf="@id/follow"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <Constraint
+            android:id="@+id/nb_photos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="90"
+            android:gravity="center"
+            android:textSize="28dp"
+            android:layout_marginTop="40dp"
+            android:textColor="#00044D"
+            android:translationX="-300dp"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"/>
+        <Constraint
+            android:id="@+id/photos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:translationX="-300dp"
+            android:text="Followers"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#00044D"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/nb_photos"/>
+
+
+        <Constraint
+            android:id="@+id/nb_followers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="10K"
+            android:gravity="center"
+            android:textSize="28dp"
+            android:layout_marginTop="40dp"
+            android:textColor="#00044D"
+            android:alpha="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/follow"
+            app:layout_constraintTop_toBottomOf="@id/back"/>
+        <Constraint
+            android:id="@+id/followers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Followers"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#00044D"
+            android:alpha="0.0"
+
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/follow"
+            app:layout_constraintTop_toBottomOf="@id/nb_followers"/>
+
+        <Constraint
+            android:id="@+id/nb_followings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="960"
+            android:gravity="center"
+            android:translationX="300dp"
+            android:textSize="28dp"
+            android:layout_marginTop="40dp"
+            android:textColor="#00044D"
+            android:alpha="1"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"/>
+        <Constraint
+            android:id="@+id/followings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Followings"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#00044D"
+            android:alpha="0.4"
+            android:translationX="300dp"
+            android:fontFamily="@font/gilroy_medium"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nb_photos"/>
+    </ConstraintSet>
+</MotionScene>
