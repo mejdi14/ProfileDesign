@@ -10,7 +10,7 @@
 Created this cool design from [Abdullah Sajol](https://www.uplabs.com/mdabdullahsajol) as an android application. 
 
 
-  <img alt="Design on Uplabs" src="/screenshots/preview.jpg" width="500" height="500" />
+  <img alt="Design on Uplabs" src="/screenshots/preview.jpg" width="500" height="400" />
 
 
 USAGE
